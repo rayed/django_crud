@@ -1,0 +1,7 @@
+apps
+db.sqlite3
+manage.py
+*.pyc
+*.swp
+books_cbv/migrations
+books_fbv/migrations
