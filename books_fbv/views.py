@@ -31,6 +31,6 @@ def book_update(request, pk, template_name='books_fbv/book_form.html'):
 def book_delete(request, pk, template_name='books_fbv/book_confirm_delete.html'):
     book= get_object_or_404(Book, pk=pk)    
     if request.method=='POST':
-        bookdelete()
+        book.delete()
         return redirect('books_fbv:book_list')
     return render(request, template_name, {'object':book})
