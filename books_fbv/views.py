@@ -6,6 +6,7 @@ from books_fbv.models import Book
 class BookForm(ModelForm):
     class Meta:
         model = Book
+        fields = ['name', 'pages']
 
 def book_list(request, template_name='books_fbv/book_list.html'):
     book = Book.objects.all()
