@@ -1,0 +1,11 @@
+<h1>Books FBV User</h1>
+<ul>
+    {% for book in object_list %}
+    <li>{{ book.name }}  ({{ book.pages }} Pages)
+    <a href="{% url 'books_fbv_user:book_edit' book.id %}">edit</a>
+    <a href="{% url 'books_fbv_user:book_delete' book.id %}">delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'books_fbv_user:book_new' %}">New</a>

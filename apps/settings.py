@@ -40,6 +40,7 @@ INSTALLED_APPS = (
 
     'books_cbv',
     'books_fbv',
+    'books_fbv_user',
 )
 
 MIDDLEWARE_CLASSES = (
