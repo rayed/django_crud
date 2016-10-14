@@ -22,7 +22,7 @@ Before running the application we need to create the needed DB tables:
 
     ./manage.py migrate
 
-Now you can run the development webs server:
+Now you can run the development web server:
 
     ./manage.py runserver
 
