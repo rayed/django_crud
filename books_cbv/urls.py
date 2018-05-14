@@ -1,10 +1,12 @@
-from django.conf.urls import patterns, url
+from django.urls import path
 
-from books_cbv import views
+from . import views
 
-urlpatterns = patterns('',
-  url(r'^$', views.BookList.as_view(), name='book_list'),
-  url(r'^new$', views.BookCreate.as_view(), name='book_new'),
-  url(r'^edit/(?P<pk>\d+)$', views.BookUpdate.as_view(), name='book_edit'),
-  url(r'^delete/(?P<pk>\d+)$', views.BookDelete.as_view(), name='book_delete'),
-)
+app_name = 'books_cbv'
+
+urlpatterns = [
+  path('', views.BookList.as_view(), name='book_list'),
+  path('new', views.BookCreate.as_view(), name='book_new'),
+  path('edit/<int:pk>', views.BookUpdate.as_view(), name='book_edit'),
+  path('delete/<int:pk>', views.BookDelete.as_view(), name='book_delete'),
+]

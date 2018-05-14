@@ -1,14 +1,12 @@
-from django.conf.urls import include, url
+from django.urls import include, path
 from django.contrib import admin
 
-urlpatterns = [
-    # Examples:
-    # url(r'^$', 'apps.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+from . import views
 
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^books_cbv/', include('books_cbv.urls', namespace='books_cbv')),
-    url(r'^books_fbv/', include('books_fbv.urls', namespace='books_fbv')),
-    url(r'^books_fbv_user/', include('books_fbv_user.urls', namespace='books_fbv_user')),
-    url(r'^$', 'apps.views.home'),
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('books_cbv/', include('books_cbv.urls', namespace='books_cbv')),
+    path('books_fbv/', include('books_fbv.urls', namespace='books_fbv')),
+    path('books_fbv_user/', include('books_fbv_user.urls', namespace='books_fbv_user')),
+    path('', views.home),
 ]
