@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<a href="{% url 'books_cbv:book_list' %}">Class Based Views</a><br>
+<a href="{% url 'books_fbv:book_list' %}">Function Based Views</a><br>    
+<a href="{% url 'books_fbv_user:book_list' %}">Function Based Views with User Access</a><br>    
+
+{% endblock %}

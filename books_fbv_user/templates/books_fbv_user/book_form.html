@@ -1,4 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2><a href="{% url 'books_fbv_user:book_list' %}">Books FBV User</a>: Edit</h2>
+
 <form method="post">{% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Submit" />
 </form>
+
+{% endblock %}

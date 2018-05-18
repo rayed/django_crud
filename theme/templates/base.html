@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title></title>
+    <style><!--
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        width:800px;
+        margin:auto;
+    }
+    a { 
+        color:#0000EE;
+        text-decoration:none;
+    }
+    a:hover {    
+        text-decoration:underline;
+    }
+    --></style>
+</head>
+<body>
+    <div id="header">
+        <h1><a href="/">Django CRUD Example</a></h1>
+    </div><!-- header -->
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div><!-- content -->
+</body>
+</html>

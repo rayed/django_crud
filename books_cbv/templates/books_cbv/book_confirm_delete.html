@@ -1,4 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2><a href="{% url 'books_cbv:book_list' %}">Books CBV</a>: Delete?</h2>
+
 <form method="post">{% csrf_token %}
-    Are you sure you want to delete "{{ object }}" ?
-    <input type="submit" value="Submit" />
+    Are you sure you want to delete "{{ object }}" ?<br>
+    <input type="submit" value="Delete" />
 </form>
+
+{% endblock %}

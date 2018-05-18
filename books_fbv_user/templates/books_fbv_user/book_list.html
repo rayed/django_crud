@@ -1,4 +1,9 @@
-<h1>Books FBV User</h1>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2><a href="{% url 'books_fbv_user:book_list' %}">Books FBV User</a></h2>
+
 <ul>
     {% for book in object_list %}
     <li>{{ book.name }}  ({{ book.pages }} Pages)
@@ -9,3 +14,5 @@
 </ul>
 
 <a href="{% url 'books_fbv_user:book_new' %}">New</a>
+
+{% endblock %}
