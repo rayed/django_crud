@@ -1,4 +1,5 @@
 db.sqlite3
-*.pyc
+__pycache__
 *.swp
-my_env
+/venv
+/.vscode
