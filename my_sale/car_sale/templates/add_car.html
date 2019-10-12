@@ -1,0 +1,15 @@
+{% include 'base.html' %}
+
+{% block main_content %}
+
+<h2>Form</h2>
+<form method="POST" class="mt-5">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit" class="text-uppercase">Submit</button>
+</form>
+
+<div>
+	<a class="btn btn-primary mt-5" href="{% url 'car_sale_home' %}">Back to list</a>
+</div>
+{% endblock %}

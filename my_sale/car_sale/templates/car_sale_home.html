@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<h1>Car Sale</h1>
+<div class="row">
+
+{% for car in cars %}
+
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <div class="card-body">
+                <h5 class="card-title">{{ car.car_make }}</h5>
+                <p class="card-text">{{ car.car_model }}</p>
+                <a href="{% url 'car_detail' car.pk %}"
+                   class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+<div>
+ 	<a class="btn btn-primary mt-5" href="{% url 'add_car' %}">Add Car</a>
+</div>
+
+{% endblock %}

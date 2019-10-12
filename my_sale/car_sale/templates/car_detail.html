@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<h1>{{ car.car_make }}</h1>
+<h1>{{ car.car_model }}</h1>
+<div class="row">
+    <div class="col-md-4">
+        <h5>Year:</h5>
+        <p>{{ car.car_year}}</p>
+        <br>
+        <h5>Fuel:</h5>
+        <p>{{ car.car_fuel }}</p>
+        <h5>Engine volume:</h5>
+        <p>{{ car.car_engine_volume }}</p>
+        <h5>Price:</h5>
+        <p>{{ car.car_price }}</p>
+    </div>
+</div>
+
+{% endblock %}
