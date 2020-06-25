@@ -123,10 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
 STATICFILES_DIRS = [
-
     os.path.join(BASE_DIR, 'static'),
-
 ]
-LOGIN_URL = '/admin/login/'
+#LOGIN_URL = '/accounts/login/'
+
+LOGIN_REDIRECT_URL =  '/books_fbv_user/'
+LOGOUT_REDIRECT_URL = '/'

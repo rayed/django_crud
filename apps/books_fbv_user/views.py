@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.forms import ModelForm
 
-from books_fbv_user.models import Book
+from .models import Book
 
 class BookForm(ModelForm):
     class Meta:

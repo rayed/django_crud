@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.forms import ModelForm
 
-from books_fbv.models import Book
+from .models import Book
 
 class BookForm(ModelForm):
     class Meta:

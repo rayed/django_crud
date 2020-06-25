@@ -1,20 +1,16 @@
  body {
-
     font-family: Arial, Helvetica, sans-serif;
     width:800px;
     margin:auto;
-
 }
 
 a { 
-
     color:#0000EE;
     text-decoration:none;
-
 }
 
 a:hover {  
-
     text-decoration:underline;
-
 }
+
+#user {float:right; }

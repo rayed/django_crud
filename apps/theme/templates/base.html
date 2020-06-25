@@ -7,11 +7,18 @@
 </head>
 <body>
     <div id="header">
+        {% if user.is_authenticated %}
+        <div id="user">
+            Hello {{ user }}, <a href="{% url 'logout' %}">Logout</a>
+        </div>
+        {% endif %}
         <h1><a href="/">Django CRUD Example</a></h1>
     </div><!-- header -->
     <div id="content">
         {% block content %}
         {% endblock %}
     </div><!-- content -->
+    <div id="footer">
+    </div>
 </body>
 </html>
